@@ -19,3 +19,5 @@ Propuesta de visualizacion, acompañada de texto en caso de ser necesaria
 
 Si uso uml, el sistema externo es un Actor ---- O en su defecto texto Libre.
 
+--> Los diagramas de casos de uso son mas utiles para enteder todo los requerimientos.
+
