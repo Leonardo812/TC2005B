@@ -1,5 +1,8 @@
 requisitos:
 
+funcionales= 
+lo que debe hacer el sistema, enunciados claros
+
 No funcionales= 
 (Texto, son conocidos como atributos de calidad, claridad, productividad, escalabilidad, seguridad)
 
@@ -11,7 +14,7 @@ normas o cosas que condicionen aspecto en nuestro requisitos funcionales
 
 por ejemplo para que un alumno pase una materia tenga mas 70 
 
-Interfaz(GUI, Comunicación)
+Interfaz(GUI, Comunicación):
 
 ¿Como se documenta?
 
@@ -21,3 +24,20 @@ Si uso uml, el sistema externo es un Actor ---- O en su defecto texto Libre.
 
 --> Los diagramas de casos de uso son mas utiles para enteder todo los requerimientos.
 
+Objetivo:
+
+Valor Agregado que otorga el sistema.
+
+Su redaccion es generica, texto concreto en oracion o parrafo que denota el valor o utilidad del Sistema de Información
+
+
+Informacion:
+
+catalogo(campos)
+
+--> modelo entidad Relación ---> modelo relacional
+
+Opciones
+* archivos
+* BD Relacionales
+*BD NO SQL No Relacionales
