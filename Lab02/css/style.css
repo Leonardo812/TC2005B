@@ -42,6 +42,14 @@ body {
     vertical-align: top;
     width: 120px;
   }
+
+  header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+
+  
   
   code,
 pre {
