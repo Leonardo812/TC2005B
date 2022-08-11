@@ -1,0 +1,40 @@
+body {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .pregunta{
+    color: crimson;
+  }
+
+  body {
+    font-family: "Arial", "times new roman", sans-serif;
+  }
+
+  body {
+    line-height: 1.2;
+    padding: 3.5em 1em; 
+  }
+  
+  h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  header  {
+    color: rgb(50, 23, 206);
+  }
+  
+  code,
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
