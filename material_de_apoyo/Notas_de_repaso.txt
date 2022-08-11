@@ -1,0 +1,21 @@
+requisitos:
+
+No funcionales= 
+(Texto, son conocidos como atributos de calidad, claridad, productividad, escalabilidad, seguridad)
+
+Reglas de negocio:
+ 
+Documentado en texto en algunos casos las reglas de negocio son condiciantes el modelo de datos, en el se documentan como restricciones de cota o de predicado
+
+normas o cosas que condicionen aspecto en nuestro requisitos funcionales
+
+por ejemplo para que un alumno pase una materia tenga mas 70 
+
+Interfaz(GUI, Comunicación)
+
+¿Como se documenta?
+
+Propuesta de visualizacion, acompañada de texto en caso de ser necesaria
+
+Si uso uml, el sistema externo es un Actor ---- O en su defecto texto Libre
+
