@@ -17,5 +17,5 @@ Interfaz(GUI, Comunicación)
 
 Propuesta de visualizacion, acompañada de texto en caso de ser necesaria
 
-Si uso uml, el sistema externo es un Actor ---- O en su defecto texto Libre
+Si uso uml, el sistema externo es un Actor ---- O en su defecto texto Libre.
 
