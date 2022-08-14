@@ -103,6 +103,5 @@ function inverso (n){
     n = n + "";
 	return n.split("").reverse().join("");
 }
-let nums = 12345;
-
-document.getElementById("res5").innerHTML = (" El numero inverso de 12345 es: "+ inverso(nums));
+let user_nums = prompt ("Dame una secuencia numeros");
+document.getElementById("res5").innerHTML = (" El numero inverso de " + user_nums +" es: " + inverso(user_nums));
