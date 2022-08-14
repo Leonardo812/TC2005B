@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Laboratorio 1</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="css/style.min.css" media="screen,projection" />
     </head>
     <header>
         <h1> Bienvenidos a mi Pagina </h1>
@@ -11,17 +11,17 @@
     <body>
         
 
-        <h1>Hola Soy: </h1>
+        <h1 class="Titulos1">Hola Soy: </h1>
         <p>Leonardo Santiago Ramos Perez ___ A01707812</p>
         <img src="https://avatars.githubusercontent.com/u/88755452?v=4" width="240" >
         
         
-        <h1>Mi Correo es: </h1>
+        <h1 class="Titulos1">Mi Correo es: </h1>
         <p> a01707812@tec.mx</p>
         <img src="https://i.blogs.es/7c3d1a/outlook-correo/450_1000.jpg" width="200">
-        <h2>Acerca de mi:</h2>
+        <h2 class="Titulos1">Acerca de mi:</h2>
         <p>Soy una persona tranquila, algo reservada. Me encantan los dias Lluviosos, no me gusta el calor, adoro la pizza y le temo a las serpientes</p>
-        <h2>Lo que me gusta hacer:</h2>
+        <h2 class="Titulos1">Lo que me gusta hacer:</h2>
         <ul> <!-- ul = Lista no ordenada  | ol = Lista ordenada-->
             <li>Jugar Videojuegos</li>
             <li>Jugar Ajedrez</li>
@@ -29,14 +29,14 @@
             <li>Leer novelas ligeras</li>
            
         </ul>
-        <h2>Intereses a Futuro:</h2>
+        <h2 class="Titulos1">Intereses a Futuro:</h2>
         <ul>
             <li>Me encataria poder ser Game Developer algun dia.</li>
             <li>Poder mejorar mis habilidades de cocina para poder cocinar cosas mas complejas</li>
         
         </ul>
         <hr><!-- esto es para poner una linea para separar el contenido-->
-        <h2>Preguntas a Responder:</h2>
+        <h2 class="Titulos2">Preguntas a Responder:</h2>
         
             <li class="pregunta"> ¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
             <p> El internet se refiere a la inmensa red conectada de computadoras y World Wide Web es la coleccion de diversas paginas web que estan en esa red de computadoras </p>
@@ -48,7 +48,7 @@
             <p>  Se hace uso del método post. Este método sirve envia datos a un servidor y crear un recurso. </p>
             <li class="pregunta"> ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</li>
             <p>   El método de petición GET,  recupera los datos del URL   </p>
-            <li class="pregunta"> Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li>
+            <li class="pregunta"> Un servidor web devuelve una Titulos1 HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li>
             <p>  No, pues la solicitud fue exitosa </p>
             <li class="pregunta"> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</li>
             <p>  No, pues los errores 4XX se presentan cuando un usuario realiza una solicitud erronea </p>
@@ -72,13 +72,13 @@
             <li class="pregunta">   ¿Qué componentes de estructura y estilo tiene una tabla?     </li>
             <p> La etiqueta "table", nos permite definir tablas, pero para modificarlas se necesitan otras etiquetas que solo pueden ser usadas dentro de una etiqueta de "table"</p>
             <li class="pregunta">   ¿Cuáles son los principales controles de una forma HTML5?     </li>
-            <h3> Input </h3>
+            <h3 class="Titulos2"> Input </h3>
             <p>  Este campo de texto tipo input permite al usuario introducir cualquier tipo de dato.</p>
             <p>  El boton de Opcion se crea definiendo valores con atributo input</p>
             <li class="pregunta">   ¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</li>
-            <h3>Navegador: Opera Gx</h3>
+            <h3 class="Titulos2">Navegador: Opera Gx</h3>
             <p>   <img src="https://sparkcdneus2.azureedge.net/sparkimageassets/XPDBZ4MPRKNN30-23547f88-151e-4a3c-b185-100552ef24bd" width="80 "/>   </p>
-            <h3>Soporte de Html5 en Opera GX:</h3>
+            <h3 class="Titulos2">Soporte de Html5 en Opera GX:</h3>
             <p>  474 de 555 puntos</p>
         
         <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
@@ -108,16 +108,16 @@
         
 
         <hr>
-        <h2>Preguntas a Responder Lab 2:</h2>
+        <h2 >Preguntas para Css:</h2>
         <ul>
             <li class="pregunta">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </li>
-            <p>         </p>
+            <p>  La palabra !important otorga prioridad a una instrucciones, por lo que instrucciones posteriores no pueden sobrescribirla. Si se usa de mala forma puede caer en una mala practica ya que puede provocar conflictos no deseados, ademas de romper la estructura del css.     </p>
             <li class="pregunta">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li>
-            <p>          </p>
+            <p>    Los fondos dependiendo de su uso pueden mejorar o empeorar una pagina, pudiendo resaltar elementos u opacarlos por lo que se necesita una elección cuidadosa.      </p>
             <li class="pregunta">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</li>
-            <p>         </p>
+            <p>      Mi recomendación son px (pixeles) pues la vista es por medio de una pantalla.   </p>
             <li class="pregunta">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</li>    
-            <p>         </p>
+            <p>    Una version minimizada ayuda a que los usuarios accedan mas rapidamente al contenido, si queremos una carga rapida en nuestra pagina debemos seleccionar elementos que no tengan demasiado peso o simplemente comprimirlos.     </p>
         </ul>
 
 

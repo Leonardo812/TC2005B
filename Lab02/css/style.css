@@ -7,6 +7,14 @@ body {
     color: crimson;
   }
 
+  .Titulos2{
+    color: orange;
+  }
+
+  .Titulos1{
+    color: rgb(33, 20, 220);
+  }
+
   body {
     font-family: "Arial", "times new roman", sans-serif;
   }
