@@ -48,7 +48,7 @@ function sumar(){
 document.getElementById("res2").innerHTML = sumar();
 
 
-//Ejercicio 3 -- Función contador
+//Ejercicio 3
 //declaracion del Array
 const arr = [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0];
 
@@ -74,7 +74,35 @@ function contador (array){
 }
 
 
-alert("dentro del Array [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0] hay: ") + contador(arr);
+alert("Array a evaluar [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0]");
 
-document.getElementById("res3").innerHTML =(" Dentro del Array [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0] hay:<br></br> ") +contador(arr);
+document.getElementById("res3").innerHTML =(" Dentro del Array [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0] tenemos un total:<br></br> ") +contador(arr);
 
+//Ejercicio 4 
+
+function promediar(numArray){
+    var avg = [];
+    for (let i = 0; i < numArray.length; i++){
+        avg.push(numArray[i].reduce(function(x,y) {return x + y;}, 0)/ numArray[i].length);
+    }
+    return avg;
+}
+var items = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8]
+  ];
+let answer = promediar(items);
+document.getElementById("res4").innerHTML = ("El promedio de cada renglon es: "+ answer);
+
+// Ejercicio 5
+
+
+function inverso (n){
+    n = n + "";
+	return n.split("").reverse().join("");
+}
+let nums = 12345;
+
+document.getElementById("res5").innerHTML = (" El numero inverso de 12345 es: "+ inverso(nums));
