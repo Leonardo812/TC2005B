@@ -51,12 +51,13 @@ document.getElementById("res2").innerHTML = sumar();
 //Ejercicio 3 -- Función contador
 //declaracion del Array
 const arr = [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0];
-let ceros = 0;
-let positivos = 0;
-let negativos = 0;
+
 
 //funcion del Contador
 function contador (array){
+    let ceros = 0;
+    let positivos = 0;
+    let negativos = 0;
     for (let i = 0; i < array.length; i++){
         if (array[i] > 0){
             positivos++;
@@ -68,9 +69,12 @@ function contador (array){
             ceros++;
         }
     }
-        alert("Ceros: "+ ceros +" Positivos: "+ positivos +" Negativos: "+ negativos);
+        respuesta = (ceros + " Ceros, "+ positivos +" Positivos y "+ negativos +" Negativos");
+        return respuesta;
 }
 
+
 alert("dentro del Array [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0] hay: ") + contador(arr);
-document.getElementById("res3").innerHTML = contador();
+
+document.getElementById("res3").innerHTML =(" Dentro del Array [0,5,-10,5,8,10,-4,2,3,-1,7,8,0,0] hay:<br></br> ") +contador(arr);
 
