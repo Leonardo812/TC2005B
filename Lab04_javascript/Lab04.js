@@ -87,14 +87,9 @@ function promediar(numArray){
     }
     return avg;
 }
-var items = [
-    [1, 2],
-    [3, 4],
-    [5, 6],
-    [7, 8]
-  ];
+var items = [[1, 2],[3, 4],[5, 6],[7, 8] ];
 let answer = promediar(items);
-document.getElementById("res4").innerHTML = ("El promedio de cada renglon es: "+ answer);
+document.getElementById("res4").innerHTML = items +  "<br></br>" + (" El promedio de cada renglon es: "+ answer);
 
 // Ejercicio 5
 
