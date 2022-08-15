@@ -1,17 +1,17 @@
 //Ejercicio 1 
-const num = prompt("Dame un numero: ");
+const num = prompt("Dame un numero para calcular su cuadro y su cubo: ");
 
 
 function tabla(){
-    let resultado = "<table>";
-    resultado += "<tr><td>Número</td>" + "<td>n^2</td>" + "<td>n^3</td></tr>";
+    let tab = "<table>";
+    tab += "<tr><td>Número</td>" + "<td>n^2</td>" + "<td>n^3</td></tr>";
     for(let i = 1; i <= num;i++){
-        resultado += "<tr>";
-        resultado += "<td>" + i +  "</td>" + "<td>" + i*i +  "</td>"  + "<td>" + i*i*i +  "</td>";
-        resultado += "</tr>";
+        tab += "<tr>";
+        tab += "<td>" + i +  "</td>" + "<td>" + i*i +  "</td>"  + "<td>" + i*i*i +  "</td>";
+        tab += "</tr>";
     }
-    resultado += "</table>";
-    return resultado;
+    tab += "</table>";
+    return tab;
 }
 document.getElementById("res1").innerHTML = tabla();
 
@@ -105,3 +105,49 @@ function inverso (n){
 }
 let user_nums = prompt ("Dame una secuencia numeros");
 document.getElementById("res5").innerHTML = (" El numero inverso de " + user_nums +" es: " + inverso(user_nums));
+
+
+//Ejercicio 6 Calcular area y perimetro de un Cuadrado
+
+
+class Cuadrado{
+    constructor (l){
+      this.lado = l;
+    }
+
+            // Calcular Area
+            calcularArea(){
+                return (this.lado * this.lado);
+              }
+
+        // Getter area
+        get area() {
+            let c_Area =  "El area es: " + this.calcularArea() + "<br></br>"
+            return c_Area 
+          }
+
+
+
+
+
+    // Método cacular perímetro
+              calcPeri () {
+                return this.lado * 4 ;
+            }
+
+     // Calcular Perimetro
+     get perimetro() {
+       let c_Per = "y su perímetro es: " + this.calcPeri() + "<br></br>"
+       return c_Per
+     }
+
+  }
+  
+  
+  var c = prompt ("Dame el lado del cuadrado: ");
+  var cuadrado = new Cuadrado (c)
+
+  document.getElementById("usuario").innerHTML = "La medida del lado que dio es " + c + " por lo que: " + "<br></br>"; 
+  document.getElementById("res6").innerHTML = cuadrado.area; 
+  document.getElementById("res7").innerHTML = cuadrado.perimetro; 
+  
