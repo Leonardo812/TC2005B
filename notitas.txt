@@ -1,0 +1,7 @@
+mantener la integridad
+
+2.-  desactiva javascript en el navegador
+
+-git add 
+
+-git revert (accion en el presente que borra la accion)
