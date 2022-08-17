@@ -3,7 +3,10 @@
     
     <head>
         <title>Laboratorio 6</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesL6.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
     </head>
     <header>
@@ -13,15 +16,146 @@
 
     <body>
         <hr>
-        <h1 class="Titulos1"> Validador de Contraseñas 2.0</h1>
         <article>
-            <p> </p>
+            <div class="container">
+                <form>  
+                    <h1>Registra tu cuenta</h1>  
+                    
+                    <td> Introduce tu contraseña </td>  <!-- pide contraseña -->   
+                    <input  id = "k1"> <br><br>  
+                    <td> Confirma tu contraseña </td>   <!-- confirma contraseña -->   
+                    <input id = "k2"> <br><br>  
+                    <button 
+                    id="verificar">Verificar
+                </button> 
+                </form>  
         </article>
-        <h1 class = "Titulos1"> Compra de Articulos 2.0</h1>
-        <article>   </article>
-        <h1 class = "Titulos1"> Cubo el retorno </h1>
-        <article>   </article>
+        <br> </br>
+        <hr>
+        <!-- tienda de Articulos-->
+        <h1 class = "Titulos1"> Bienvenidos a la Tienda Secreta</h1>
+        <div class="col s4">
+            <img  src="https://i.blogs.es/981d4f/1366_2000/1366_2000.jpg" width="200 "/>
+        </div>
+        
+        <center>
+            <h1></h1>
+            
+            <div class="shop-items">
+                <div class="row">
+                    <div class="col s4">
+                    <div class="card">
+                        <div class="card-image">
+                        <img class="shop-item-image" src="https://m.media-amazon.com/images/I/61Nv0biwopL._AC_SX425_.jpg">
+                        <span class="card-title"></span>
+                        </div>
+                        <div class="card-content">  
+                        <p class="shop-item-title">Peluche de Ajolote</p>
+                        <h4 class="shop-item-price">$15</h4>
+                        <button class="btn btn-primary shop-item-button blue darken-1" type="button">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="card">
+                        <div class="card-image">
+                            <img class="shop-item-image" src="https://m.media-amazon.com/images/I/71I7m1tG9YL._AC_SX425_.jpg">
+                            <span class="card-title"></span>
+                        </div>
+                        <div class="card-content">
+                            <p class="shop-item-title">TeeTurtle Juego Base Happy Little Dinosaurs</p>
+                            <h4 class="shop-item-price">$35</h4>
+                            <button class="btn btn-primary shop-item-button blue darken-1" type="button">Añadir al carrito</button>
+                        </div>
+                        </div>
+                    </div>
+                <div class="col s4">
+                    <div class="card">
+                    <div class="card-image">
+                        <img class="shop-item-image" src="https://m.media-amazon.com/images/I/71lH9qINAWL._AC_SL1500_.jpg">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p class="shop-item-title">teclado electrónico de piano digital de tamaño completo de 88 teclas para todos los niveles</p>
+                        <h4 class="shop-item-price">$280</h4>
+                        <button class="btn btn-primary shop-item-button blue darken-1" type="button">Añadir al carrito</button>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </center> 
+            <section class="container content-section">
+                <h2 class="section-header">Carrito</h2>
+                <div class="cart-row">
+                <div class="row">
+                    <span class="col s4">Articulo</span>
+                    <span  class="col s4" >precio</span>
+                    <span class="col s4">Cantidad</span>
+                </div> 
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            </div>
+            <button class="btn btn-primary btn-purchase blue darken-1" type="button">Comprar</button>
+           </section>
+        <article>
+            <br></br>
+            <hr>
+            <div class="container">
+                 
+                <form>  
+                       
+                    <h1>Calculo de Area y Perimetro de un Cuadrado:</h1>  
+
+                    <div>
+                        <img  src="https://www.smartick.es/blog/wp-content/uploads/cuadrado-222x201.png" width="200 "/>  
+                    </div>
+                    <br></br>
+                    <td> Introduce el lado del Cuadrado</td>  <!-- pide contraseña -->   
+                    <input  id = "lado1"> <br><br>  
+                    <button class="btn btn-primary btn-purchase blue darken-1" 
+                    id="calcular">Calcular
+                </button> 
+                </form>  
+        </article>
+
+        <hr>
+        <article>
+            <br></br>
+            <h1>Preguntas</h1> 
+            <ol>
+                <h7 class="title">
+                    1. ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?
+                </h7>
+                <p>
+                    Porque en casos donde el usuario cometa errores por ejemplo llenando un formulario, lo sabre inmediatamente evitando esperar la respuesta del servidor.
+                </p>
+
+                <h7 class="title">
+                    2. ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+                </h7>
+                <p>
+                    La manera mas simple es desactivar JavaScript
+                </p>
+                <div class="col s4">
+                    <img  src="https://i.blogs.es/544e7d/650_1000_javascript_logo/1366_2000.png" width="200 "/>
+                </div>
+
+                <h7 class="title">
+                   3.  Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?
+                </h7>
+             <p>
+                Sigue siendo buena practica pues el usuario que evita las validaciones esto no tendría el acceso completo a la página.
+             </p>
+            </ol>
+        </article>
         <script src="js/Lab06.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <br></br>
         <b></b>
     </body>
