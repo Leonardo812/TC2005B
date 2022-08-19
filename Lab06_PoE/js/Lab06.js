@@ -1,11 +1,11 @@
 // Función creada para verificar que las contraseñas sean iguales
-const c1 = document.getElementById("k1");  
-const c2 = document.getElementById("k2");
+const key = document.getElementById("k1");  
+const confirm_key = document.getElementById("k2");
 const boton = document.getElementById("verificar");
 boton.addEventListener("click",Verificar_key);
 
 function Verificar_key() {   
-    if(c1.value == c2.value) {   
+    if(key.value == confirm_key.value) {   
         alert("¡Password creado con exito!");  
     } 
     else {  
@@ -25,9 +25,9 @@ for (var i = 0; i < removerCarritoButtons.length; i++){
     })
 }
 
-var quantityInputs = document.getElementsByClassName('cart-quantity-input');
-for (var i = 0; i < quantityInputs.length; i++){
-    var input = quantityInputs[i];
+var Cantidad_Inpt = document.getElementsByClassName('cart-quantity-input');
+for (var i = 0; i < Cantidad_Inpt.length; i++){
+    var input = Cantidad_Inpt[i];
     input.addEventListener('change',function(event) {
         var inputClicked = event.target;
         if (isNaN(inputClicked.value) || inputClicked.value <= 0) {
@@ -40,7 +40,7 @@ for (var i = 0; i < quantityInputs.length; i++){
 var addToCartButtons = document.getElementsByClassName('shop-item-button');
 for (var i = 0; i < addToCartButtons.length; i++){
     var button = addToCartButtons[i];
-    button.addEventListener('click',addToCartClicked);
+    button.addEventListener('click',Agrega_Carrito);
 }
 
 document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseClicked);
@@ -69,7 +69,7 @@ function quantityChanged(event) {
     actualizarCarrito()
 }
 
-function addToCartClicked(event) {
+function Agrega_Carrito(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
@@ -86,11 +86,11 @@ function addItemToCart (title, price, imageSrc) {
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
-            alert('Este item ha sido agregado al carrito');
+            alert('Ya agregaste esto al carrito');
             return;
         }
     }
-    var cartRowContents = `
+    var Contenido_Carrito = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
@@ -100,7 +100,7 @@ function addItemToCart (title, price, imageSrc) {
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger red darken-1" type="button">Quitar</button>
         </div>`
-    cartRow.innerHTML = cartRowContents;
+    cartRow.innerHTML = Contenido_Carrito;
     cartItems.append(cartRow);
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click',removerCarrito)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change',quantityChanged)
@@ -112,9 +112,9 @@ function actualizarCarrito(){
     var total = 0;
     for (var i = 0; i < cartRows.length; i++){
         var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0];
+        var precioElemento = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-        var price = parseFloat(priceElement.innerText.replace('$',''));
+        var price = parseFloat(precioElemento.innerText.replace('$',''));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
     }
