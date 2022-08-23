@@ -1,0 +1,75 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+/* 
+body {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .pregunta{
+    color: crimson;
+  }
+
+  .Titulos2{
+    color: orange;
+  }
+
+  .Titulos1{
+    color: rgb(33, 20, 220);
+  }
+
+  body {
+    font-family: "Arial", "times new roman", sans-serif;
+  }
+
+  body {
+    line-height: 1.2;
+    padding: 3.5em 1em; 
+  }
+  
+  h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  header  {
+    color: rgb(255, 255, 255);
+  }
+
+  header {
+    background-color: #263d36;
+    background-image: url("https://fondosmil.com/fondo/5468.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+    text-align: center;
+  }
+
+  header img {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  
+  code,
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
+ */

@@ -1,0 +1,14 @@
+{
+  "name": "lab11_ex",
+  "version": "1.0.0",
+  "description": "Laboratorio practica 11",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lab11"
+  ],
+  "author": "leonardo",
+  "license": "ISC"
+}
