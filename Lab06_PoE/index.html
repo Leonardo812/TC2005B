@@ -12,19 +12,21 @@
     <header>
         <h1>Laboratorio 6</h1>
     </header>
-    <p>por Leonardo Santiago Ramos Pérez A01707812</p>
+    <h6>por Leonardo Santiago Ramos Pérez A01707812</h6>
 
     <body>
         <hr>
         <article>
             <div class="container">
                 <form>  
-                    <h1>Registra tu cuenta</h1>  
+                    <h1 style="color:white;"> 
+                        Registra tu Cuenta 
+                    </h1> 
                     
                     <td> Introduce tu contraseña </td>  <!-- pide contraseña -->   
-                    <input  id = "k1"> <br><br>  
+                    <input id = "k1"  type="password" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" title="Three letter country code"> <br><br>  
                     <td> Confirma tu contraseña </td>   <!-- confirma contraseña -->   
-                    <input id = "k2"> <br><br>  
+                    <input id = "k2" type="password"> <br><br>  
                     <button 
                     id="verificar">Verificar
                 </button> 
@@ -33,7 +35,7 @@
         <br> </br>
         <hr>
         <!-- tienda de Articulos-->
-        <h1 class = "Titulos1"> Bienvenidos a la Tienda Secreta</h1>
+        <h1 style="color:black;"> Bienvenidos a la Tienda Secreta</h1>
         <div class="col s4">
             <img  src="https://i.blogs.es/981d4f/1366_2000/1366_2000.jpg" width="200 "/>
         </div>
@@ -103,9 +105,10 @@
             </div>
             <button class="btn btn-primary btn-purchase blue darken-1" type="button">Comprar</button>
            </section>
-        <article>
+           <hr>
+        <article class="article_1">
             <br></br>
-            <hr>
+           
             <div class="container">
                  
                 <form>  

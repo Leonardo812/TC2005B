@@ -26,8 +26,13 @@
 
 
   /*artículos: article*/
-article { margin: 0.5em 3em; padding: 0.5em 2em; background-color:blue; border: 3px inset #720fe3; }
-article p { text-align: justify; }
+article { margin: 0.5em; padding: 0.5em; background-color:rgb(172, 172, 206); border: 4px inset #720fe3; }
+article p{ text-align: justify; }
+
+.article_1{margin: 0.5em; padding: 0.5em; background-color:white; border: 4px inset #720fe3;}
+
+
+
   
 /* Cuerpo */
 body {
@@ -74,24 +79,4 @@ code {
 
 pre {
   padding: 1em;
-}
-
-/* tabla */
-
-table {
-    width: 300px;
-    overflow: hidden;
-    box-shadow: 0 0 10px red;
-}
-
-th,
-td {
-    padding: 15px;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
-p{
-  font-size: 1.2em;
 }
