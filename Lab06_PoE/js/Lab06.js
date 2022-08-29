@@ -1,4 +1,5 @@
 // Función creada para verificar que las contraseñas sean iguales
+
 const key = document.getElementById("k1");  
 const confirm_key = document.getElementById("k2");
 const boton = document.getElementById("verificar");
