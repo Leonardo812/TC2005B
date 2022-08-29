@@ -19,99 +19,79 @@ const server = http.createServer( (request, response) => {
         filesystem.writeFileSync('M_hola.txt', 'Direccion Hola FUNCIONA');
         console.log("Direccion Hola FUNCIONA");
 
-    } else if (request.url === "/trivia" && request.method === "GET") {
+    } else if (request.url === "/adios"){
         response.setHeader('Content-Type', 'text/html');
         response.write("<!DOCTYPE html>");
         response.write('<head><meta charset="UTF-8"></head>');
-        response.write("<h1>Pregunta al pulpo quién va a ganar</h1>");
-        response.write('<form action="trivia" method="POST">');
-        response.write('<fieldset>');
-        response.write('<legend>Equipos</legend>');
-        response.write('<label for="visitante">Visitante</label><input type="text" name="visitante" id="visitante">');
-        response.write('<br><br>');
-        response.write('<label for="local">Local</label><input type="text" name="local" id="local">');
-        response.write('</fieldset>');
-        response.write('<input type="submit" value="Adivina">');
-        response.write('</form>');
+        response.write("<h1>Hasta Luego, vuelve pronto</h1>");
+        response.write('<img src="https://i0.wp.com/www.elblogalternativo.com/wp-content/uploads/2014/06/despedida.jpg?fit=550%2C403&ssl=1"/>')
         response.end();
-        filesystem.writeFileSync('M_trivia_get.txt', 'Direccion Trivia_get Funciona');
-        console.log("Direccion Trivia_get Funciona");
-        
-    } else if (request.url === "/trivia" && request.method === "POST") {
-        const datos = [];
-        request.on('data', (dato) => {
-            console.log(dato);
-            datos.push(dato);
-        });
-        return request.on('end', () => {
-            const datos_completos = Buffer.concat(datos).toString();
-            console.log(datos_completos);
-            const dato_visitante = datos_completos.split('&')[0].split('=')[1];
-            console.log(dato_visitante);
-            const dato_local = datos_completos.split('&')[1].split('=')[1];
-            console.log(dato_local);
-            response.setHeader('Content-Type', 'text/html');
-            response.write("<!DOCTYPE html>");
-            response.write('<head><meta charset="UTF-8"></head>');
-            response.write("<h1>El resultado es: </h1>");
-            if (Math.floor(Math.random() * 2) == 0) {
-                response.write('<h2>' + dato_visitante + '</h2>');
-            } else {
-                response.write('<h2>' + dato_local + '</h2>');
-            }
-            filesystem.writeFileSync('M_trivia_post.txt', 'Direccion Trivia_post Funciona');
-            console.log("Direccion Trivia_post Funciona");
-            return response.end();
+        filesystem.writeFileSync('M_adios.txt', 'Direccion adios FUNCIONA');
+        console.log("Direccion Adios FUNCIONA");
 
-        });
-    } 
-      
+    }
     
     
-    
-    else if (request.url === "/trivia" && request.method === "GET") {
+    else if (request.url === "/videojuegos" && request.method === "GET") {
         response.setHeader('Content-Type', 'text/html');
         response.write("<!DOCTYPE html>");
         response.write('<head><meta charset="UTF-8"></head>');
-        response.write("<h1>Pregunta al pulpo quién va a ganar</h1>");
-        response.write('<form action="trivia" method="POST">');
-        response.write('<fieldset>');
-        response.write('<legend>Equipos</legend>');
-        response.write('<label for="visitante">Visitante</label><input type="text" name="visitante" id="visitante">');
-        response.write('<br><br>');
-        response.write('<label for="local">Local</label><input type="text" name="local" id="local">');
-        response.write('</fieldset>');
-        response.write('<input type="submit" value="Adivina">');
+        response.write("<h1> Bienvenido al gran salon<h1>");
+        response.write('<img src="https://c.wallhere.com/photos/97/cc/video_games_digital_art_Space_Invaders_retro_games_black_background_minimalism_simple_background-258060.jpg!d" width="500 "/>')
+        response.write('<form action="videojuegos" method="POST">');
+        response.write("<h1> Para jugar alguno de los videojuegos, seleccione una opción: <h1>");
+        response.write("<h5> 1.- Fornite: </h5>");
+        response.write("<h5> 2.- Dead by Daylight: </h5>");
+        response.write("<h5> 3.- League of Legends: </h5>");
+        response.write("<h5> 4.- Valorant: </h5>");
+        response.write("<h3> Escriba solo el numero del juego </h3>");
+        response.write('<label for="videojuegos">Videojuego</label><input type="text" name="videojuegos" id="videojuegos">');
+        response.write('<input type="submit" value="Enviar">');
         response.write('</form>');
         response.end();
-    } else if (request.url === "/trivia" && request.method === "POST") {
+    } 
+    
+    else if (request.url === "/videojuegos" && request.method === "POST") {
         const datos = [];
         request.on('data', (dato) => {
-            console.log(dato);
             datos.push(dato);
+            filesystem.writeFileSync("videojuegos.txt",dato);
         });
         return request.on('end', () => {
-            const datos_completos = Buffer.concat(datos).toString();
-            console.log(datos_completos);
-            const dato_visitante = datos_completos.split('&')[0].split('=')[1];
-            console.log(dato_visitante);
-            const dato_local = datos_completos.split('&')[1].split('=')[1];
-            console.log(dato_local);
-            response.setHeader('Content-Type', 'text/html');
-            response.write("<!DOCTYPE html>");
-            response.write('<head><meta charset="UTF-8"></head>');
-            response.write("<h1>El resultado es: </h1>");
-            if (Math.floor(Math.random() * 2) == 0) {
-                response.write('<h2>' + dato_visitante + '</h2>');
-            } else {
-                response.write('<h2>' + dato_local + '</h2>');
-            }
-            filesystem.writeFileSync('M_trivia.txt', 'Direccion Trivia Funciona');
-            console.log("Direccion Trivia Funciona");
-            return response.end();
+        const datos_completos = Buffer.concat(datos).toString();
+        const games = datos_completos.split('&')[0].split('=')[1];
+        console.log(datos_completos);
+        response.setHeader('Content-Type', 'text/html');
+        response.write("<!DOCTYPE html>");
+        response.write('<head><meta charset="UTF-8"></head>');
+        if (games == 1){
+            response.write("<h1>Gracias iniciado Fornite: </h1>");
+            response.write('<img src="https://cdn2.unrealengine.com/21br-metaimage-lineup-1920x1080-44acd5f27136.jpg" width="500 "/>')
+            
 
-        });
-    } 
+        } else if ( games == 2){
+            response.write("<h1>Gracias iniciado Dead by Daylight: </h1>");
+            response.write('<img src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7" width="500 "/>')
+            
+        }else if ( games == 3){
+            response.write("<h1>Gracias iniciado League of Legends : </h1>");
+            response.write('<img src="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_LeagueofLegends_RiotGames_S1_2560x1440-ee500721c06da3ec1e5535a88588c77f"  width="500"/>')
+            
+        }else if ( games == 4){
+            response.write("<h1>Gracias iniciado Valorant: </h1>");
+            response.write('<img src="https://i.blogs.es/78bc94/valorant2/1366_2000.jpg" width="500 "/>')
+            
+        }
+        else{
+            response.write("<h1>Lo sentimos, juego no encontrado: </h1>");
+            response.write('<img src="https://sitechecker.pro/wp-content/uploads/2017/12/404.png" width="500 "/>')
+            response.write('<h2> Videojuego no encontrado, Error.</h2>');
+        }
+        // response.write("<h1>Gracias: </h1>");
+        // response.write('<h2>' + games + '</h2>');
+        response.end();
+    });
+    }  
     else {
         response.statusCode = 404;
         response.setHeader('Content-Type', 'text/html');

@@ -119,3 +119,4 @@ boton.onclick = () => {
     document.getElementById("contenedor_imagen").innerHTML = 
         '<img src="media/pulpo.jpg" alt="Imagen de un pulpo enojado">';
 }
+
