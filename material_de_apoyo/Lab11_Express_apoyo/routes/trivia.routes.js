@@ -9,7 +9,7 @@ router.get('/trivia', (request, response, next) => {
         '<form action="trivia" method="POST">' +
         '<fieldset>' +
         '<legend>Equipos</legend>' +
-        '<label for="visitante">Visitante2</label><input type="text" name="visitante" id="visitante">' +
+        '<label for="visitante">Visitante</label><input type="text" name="visitante" id="visitante">' +
         '<br><br>' +
         '<label for="local">Local</label><input type="text" name="local" id="local">' +
         '</fieldset>' +

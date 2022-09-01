@@ -1,0 +1,85 @@
+Reglas de equivalencia
+
+
+
+Algebra relacional
+1.- Materiales
+
+Sql
+SELECT * FROM Materiales
+/*************************************************/
+Algebra relacional - Operador PI - Proyeccion
+
+SELECT Descripcion FROM Materiales
+
+
+/*************************************************/
+
+Algebra relacional - Operador SIGMA - SEleccion 
+
+SELECT * 
+FROM Materiales
+WHERE Precio > 1000
+
+/*************************************************/
+
+Operador Producto Cartesiano
+
+SELECT
+FROM Materiales,Entregan
+
+/*************************************************/
+
+Operador Join Natural Materiales >< Entregan
+
+SELECT
+FROM Materiales,Entregan
+WHERE Materiales.clave = Entregan.clave
+
+/*************************************************/
+
+Interseccion 
+
+SELECT clave FROM Materiales
+
+
+-----------------------------
+
+Ejercicios
+###______6________###
+  Nombre de actriz, fecha de nacimiento y título de la películas donde han sido parte del elenco mujeres (obtener sólo actrices, no actores).
+
+### Algebra ###
+
+  σ sexo = ('femenino' (actor))
+  Actrices >< elenco
+  π (Actriz.Nombre, actriz.fechadenacimiento, titulo.titulo)(Actrices >< elenco)
+
+### Sql ###
+
+/* Vista Actrices */
+SELECT  Actor.Nombre,  Actor.fechadenacimiento , elenco.titulo
+FROM actor, ELENCO
+WHERE sexo = 'femenino'
+
+INNER JOIN
+elenco on ELENCO.Nombre = actor.Nombre;
+
+###______7________###
+
+### Algebra ###
+
+Nombre e importe de ventas de los productores que han producido películas en las que ha actuado Tom Cruise.
+ Tom Cruise = σ; {Nombre 'Tom Cruise'} (elenco); >< π; {Productor.Nombre, Productor.importeventas}(películas >< productores)
+
+### Sql ###
+
+SELECT Productor.Nombre, Productor.importeventas
+FROM productor pro, elenco e, Pelicula p.
+WHERE e.Nombre = 'Tom Cruise', pro.idproductor = p.idproductor
+e.titulo  = p.titulo
+e.titulo  = p.año 
+
+
+
+###______5________###
