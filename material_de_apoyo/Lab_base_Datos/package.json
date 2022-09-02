@@ -1,0 +1,31 @@
+{
+  "name": "pulpos",
+  "version": "1.0.0",
+  "description": "Laboratorios de TC2005B ad22",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ejuarez@bitbucket.org/ejuarez/pulpos.git"
+  },
+  "keywords": [
+    "tc2005b"
+  ],
+  "author": "Eduardo Juarez",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/ejuarez/pulpos#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3"
+  }
+}
