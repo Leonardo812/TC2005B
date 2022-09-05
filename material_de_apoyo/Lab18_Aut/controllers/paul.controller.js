@@ -18,6 +18,7 @@ exports.getTrivia = (request, response, next) => {
                 clicks: request.cookies.numero_clicks ? request.cookies.numero_clicks : numero_clicks,
                 ultimo_ganador: ultimo_ganador,
                 equipos: rows,
+                isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
             });
         })
         .catch(err => {
@@ -54,5 +55,6 @@ exports.postTrivia = (request, response, next) => {
         ganador: unGanador.nombre, 
         ganadores: Ganador.fetchAll(),
         clicks: numero_clicks,
+        isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
     });
 };

@@ -1,0 +1,13 @@
+<nav>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Pulpos</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if (isLoggedIn) { %> 
+            <li><a href="/paul/trivia">Trivia</a></li>
+            <li><a href="/equipos">Equipos</a></li>
+            <li><a href="/user/logout">Salir</a></li>
+        <% } %> 
+    </ul>
+    </div>
+</nav>
+<div class="container">
