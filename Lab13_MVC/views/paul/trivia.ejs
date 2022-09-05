@@ -1,0 +1,8 @@
+<%- include('../includes/head.ejs') %>
+<%- include('../includes/nav.ejs') %>    
+<%- include('../includes/trivia.form.ejs') %> 
+<% if (ultimo_ganador) { %>
+    <p>El útimo ganador fue <%= ultimo_ganador.nombre %>.</p>
+<% } %>
+<p>Le has pedido a Paul que adivine <%= clicks %> veces.</p>
+<%- include('../includes/foot.ejs') %>
