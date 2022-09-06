@@ -1,17 +1,22 @@
 {
-  "name": "lab12_ex",
+  "name": "pulpos",
   "version": "1.0.0",
-  "description": "Laboratorio practica 12",
+  "description": "Laboratorios de TC2005B ad22",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ejuarez@bitbucket.org/ejuarez/pulpos.git"
+  },
   "keywords": [
-    "lab11"
+    "tc2005b"
   ],
-  "author": "leonardo",
-  "license": "ISC",
+  "author": "Eduardo Juarez",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/ejuarez/pulpos#readme",
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
