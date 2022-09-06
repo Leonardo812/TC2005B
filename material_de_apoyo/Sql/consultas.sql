@@ -28,3 +28,23 @@ WHERE m.clave = E.clave
 GROUP BY M.descripcion
 HAVING COUNT(*) >= 4
 ORDER BY COUNT(*) DESC
+
+
+
+
+
+
+
+-- Subconsultas 56
+
+
+-- descripcion de los materiales que no fueron entregados
+
+SELECT descripcion
+FROM material M , entregan E
+where M.clave <> E.clave
+
+
+
+
+

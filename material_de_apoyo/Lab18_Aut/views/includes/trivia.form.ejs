@@ -1,5 +1,6 @@
 <h1>Pregunta al pulpo quién va a ganar</h1>
 <form action="trivia" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
     <fieldset>
         <legend>Equipos</legend>
         <div class="input-field col s12">
