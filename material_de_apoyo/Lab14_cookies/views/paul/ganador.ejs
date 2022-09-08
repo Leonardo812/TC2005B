@@ -1,0 +1,14 @@
+<%- include('../includes/head.ejs') %>
+<%- include('../includes/nav.ejs') %>    
+    <h1>El ganador será: <%= ganador %></h1>
+    <% if (ganadores.length > 0) { %>
+        <div class="collection">
+            <% for (let g of ganadores) { %>
+                <a href="#!" class="collection-item"><%= g.nombre %></a>
+            <% } %>
+            </div>
+    <% } else { %>
+        <h2>No ha adivinanzas previas</h2>
+    <% } %>  
+    <p>Le has pedido a Paul que adivine <%= clicks %> veces.</p>
+<%- include('../includes/foot.ejs') %>
