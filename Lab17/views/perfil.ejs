@@ -1,0 +1,52 @@
+<%- include('includes/head.ejs') %>
+
+<!-- Perfil -->
+<body>
+
+    <H3 align="center"><em> Perfiles para el blog </em></H3> <br><br>
+
+
+    <div class="row">
+            <% for (let n_perfil of perfil) { %>
+                <div class="card" style="max-width: 350px;">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="<%-  n_perfil.imagen %>" class="img-fluid rounded-start" alt="...">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4"><%=  n_perfil.nombre %></p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            <%=  n_perfil.descripcion %>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            <%} %> 
+        </div>
+
+    <% if (username != '') { %>
+        <p><b>El ultimo jugador agregado fue: <%= username %></b></p>
+    <% } %>  
+    
+    <br>
+    <center>
+    <br>
+    <a href="perfil/nuevoPerfil"><button class="button is-danger is-light">Añadir perfil</button></a>
+    <br><br>
+  
+        <a href="/users/principal"> <button class="button is-danger is-light">Pagina Inicial</button></a>
+        <hr>
+    </center>
+
+    </body>
+
+    
+<%- include('includes/foot.ejs') %>

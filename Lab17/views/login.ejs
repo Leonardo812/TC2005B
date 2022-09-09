@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+<div class="container ">
+    <center>
+        <figure class="image is-128x128">
+          <img src="https://i.pinimg.com/736x/ea/c0/9a/eac09a99270086877ca5279c2fd99822.jpg">
+          </figure>
+      </center> 
+</div>
+
+     <br>
+     <article >
+        <center>
+            <h1 id="principal">Hola, ¡que tal!</h1> 
+            <h2>Para ingresar al sitio, introduce tus datos:</h2>
+            <form action="/users/login" method="POST">
+                <label for="username">Nombre de usuario: </label>
+                <input type="text" id="username" name="username" placeholder="usuario">
+                <br><br>
+                <label for="password">Contraseña: </label>
+                <input type="password" id="password" name="password">
+                <br><br>
+                <input type="submit" value="Enviar">
+            </form> 
+        </center>
+        <br>
+
+        <br><br>
+    </div>
+
+     </article>
+   
+<%- include('includes/foot.ejs') %>
