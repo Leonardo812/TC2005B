@@ -9,19 +9,24 @@
 
      <br>
      <article >
-        <center>
-            <h1 id="principal">Hola, ¡que tal!</h1> 
-            <h2>Para ingresar al sitio, introduce tus datos:</h2>
-            <form action="/users/login" method="POST">
-                <label for="username">Nombre de usuario: </label>
-                <input type="text" id="username" name="username" placeholder="usuario">
-                <br><br>
-                <label for="password">Contraseña: </label>
-                <input type="password" id="password" name="password">
-                <br><br>
-                <input type="submit" value="Enviar">
-            </form> 
-        </center>
+        <h1 id="principal">Introduzca sus datos para entrar</h1> 
+        <form class="box" action="/users/login" method="POST">
+            <div class="field">
+              <label class="label">Nombre de usuario:</label>
+              <div class="control">
+                <input class="input" type="text" name="username" placeholder="usuario">
+              </div>
+            </div>
+          
+            <div class="field">
+              <label class="label">Contraseña:</label>
+              <div class="control">
+                <input class="input" type="password" type="submit" placeholder="********">
+              </div>
+            </div>
+            <button class="button is-primary">ingresar</button>
+          </form>
+          
         <br>
 
         <br><br>

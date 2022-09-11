@@ -5,13 +5,13 @@
 
     <H3 align="center"><em> Perfiles para el blog </em></H3> <br><br>
 
-
+    <center>
     <div class="row">
             <% for (let n_perfil of perfil) { %>
                 <div class="card" style="max-width: 350px;">
                     <div class="card-image">
                         <figure class="image">
-                            <img src="<%-  n_perfil.imagen %>" class="img-fluid rounded-start" alt="...">
+                            <img src="<%-  n_perfil.imagen %>" class="img-fluid rounded-start" alt="Perfil">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -31,12 +31,9 @@
                 <br>
             <%} %> 
         </div>
-
-    <% if (username != '') { %>
-        <p><b>El ultimo jugador agregado fue: <%= username %></b></p>
-    <% } %>  
     
     <br>
+</center>
     <center>
     <br>
     <a href="perfil/nuevoPerfil"><button class="button is-danger is-light">Añadir perfil</button></a>
