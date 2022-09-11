@@ -1,0 +1,61 @@
+<%- include('includes/head.ejs') %>
+<div class="container ">
+    <center>
+        <figure class="image is-128x128">
+          <img src="https://i.pinimg.com/736x/ea/c0/9a/eac09a99270086877ca5279c2fd99822.jpg">
+          </figure>
+      </center> 
+</div>
+
+     <br>
+     <article >
+        <h1 id="principal">Introduzca sus datos para entrar al blog</h1> 
+        <form class="box" action="/users/login" method="POST">
+            <div class="field">
+              <label class="label">Nombre de usuario:</label>
+              <div class="control">
+                <input class="input" type="text" name="username" placeholder="usuario">
+              </div>
+            </div>
+          
+            <div class="field">
+              <label class="label">Contraseña:</label>
+              <div class="control">
+                <input class="input" type="password" type="submit" placeholder="********">
+              </div>
+            </div>
+            <button class="button is-primary">ingresar</button>
+          </form>
+          
+        <br>
+        <br><br>
+    </div>
+
+     </article>
+     <div class="container ">
+      <center>
+          <figure class="image is-128x128">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCzUObzwr-BB-lwST_WQJQZBSsfy9nYwmSMw&usqp=CAU">
+            </figure>
+        </center> 
+  </div>
+
+     <article>
+      <center>
+
+      
+      <br><br>
+      <h4> Crea tu perfil </h4>
+      <form class="box" action="/users/signup">
+          <div class="control">
+            <button class="button is-primary"> registrar </button>
+          </div>
+        </div>
+    </form>
+  </center>
+     </article>
+
+     <br>
+     
+   
+<%- include('includes/foot.ejs') %>

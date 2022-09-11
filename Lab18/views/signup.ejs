@@ -1,0 +1,41 @@
+<%- include('includes/head.ejs') %>
+<center>
+    <h2>Registro de perfil para el Blog:</h2>
+    <br>
+    <article>
+
+        <form class="box" action="/users/signup" method="POST">
+            <div class="field">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+                <label class="label">Introduzca un nombre de usuario:</label>
+                <div class="control">
+                  <input type="text" id="username" name="username"  class="input" type="text" name="username" placeholder="Paul_Octavio2">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Introduzca una Contraseña:</label>
+                <div class="control">
+                    <input class="input" type="password" type="submit" placeholder="********">
+                </div>
+              </div>
+            <button class="button is-primary">Registrar</button>
+        </form>
+
+    </article>
+
+        <figure class="image is-128x128">
+          <img src="https://www.insak.com.co/aym_image/aym_ico/aym_ico_user.png">
+          </figure>
+
+        <h4> ¿Tienes Cuenta? </h4>
+        <form class="box" action="/users/login">
+            <div class="control">
+              <button class="button is-primary"> iniciar sesión </button>
+            </div>
+          </div>
+      </form>
+    </center>
+</div>
+    <br><br>
+<%- include('includes/foot.ejs') %>
