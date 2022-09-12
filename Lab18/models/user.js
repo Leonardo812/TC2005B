@@ -8,16 +8,22 @@ module.exports = class User {
     constructor(nuevo_username, nuevo_password) {
         this.username = nuevo_username;
         this.password = nuevo_password;
+       
     }
 
 
     save() {
+        
         return bcrypt.hash(this.password, 12)
-            .then((password_cifrado) => {
-                return db.execute( 'INSERT INTO users(username, password) VALUES(?,?)',[ this.username, password_cifrado]);
+            .then((C_password) => {
+                console.log(this.username);
+                console.log(C_password);
+                return db.execute( 'INSERT INTO users(username, password) VALUES(?,?)',[ this.username, C_password]);
             }).catch((error) => {
                 console.log("Error al cifrar el password");
                 console.log(error);
+                console.log(this.username);
+                console.log(this.password);
             });
     }
 

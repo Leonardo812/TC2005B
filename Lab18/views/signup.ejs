@@ -5,20 +5,20 @@
     <article>
 
         <form class="box" action="/users/signup" method="POST">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <div class="field">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                 <label class="label">Introduzca un nombre de usuario:</label>
                 <div class="control">
-                  <input type="text" id="username" name="username"  class="input" type="text" name="username" placeholder="Paul_Octavio2">
+                  <input type="text" id="username" name="username"  class="input" placeholder="Paul_Octavio2" required >
                 </div>
               </div>
-
               <div class="field">
                 <label class="label">Introduzca una Contraseña:</label>
                 <div class="control">
-                    <input class="input" type="password" type="submit" placeholder="********">
+                  <input type="password" id="password" name="password"  class="input"  placeholder="********" required>
                 </div>
               </div>
+
             <button class="button is-primary">Registrar</button>
         </form>
 

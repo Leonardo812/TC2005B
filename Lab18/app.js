@@ -4,12 +4,9 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const csrf = require('csurf');
 const csrfProtection = csrf();
-
-
 const rutas_users = require('./routes/user.routes');
 const rutas_perfil = require('./routes/perfil.routes');
 const path = require('path');
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -17,9 +14,8 @@ app.set('views', 'views');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// cookies confi
 app.use(bodyParser.urlencoded({extended: false}));
-
-
 app.use(cookieParser());
 app.use(session({
     secret: 'Usuario', 
@@ -27,8 +23,8 @@ app.use(session({
     saveUninitialized: false, 
 }));
 
-app.use(csrfProtection); 
 
+app.use(csrfProtection); 
 app.use((request, response, next) => {
     response.locals.csrfToken = request.csrfToken();
     next();

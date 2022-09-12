@@ -11,17 +11,18 @@
      <article >
         <h1 id="principal">Introduzca sus datos para entrar al blog</h1> 
         <form class="box" action="/users/login" method="POST">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <div class="field">
               <label class="label">Nombre de usuario:</label>
               <div class="control">
-                <input class="input" type="text" name="username" placeholder="usuario">
+                <input class="input" type="text" name="username" placeholder="usuario" id="username" required> 
               </div>
             </div>
           
             <div class="field">
               <label class="label">Contraseña:</label>
               <div class="control">
-                <input class="input" type="password" type="submit" placeholder="********">
+                <input class="input" type="password" type="submit" placeholder="********" id="password" required>
               </div>
             </div>
             <button class="button is-primary">ingresar</button>

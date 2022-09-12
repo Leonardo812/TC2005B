@@ -5,7 +5,9 @@ const bcrypt = require('bcryptjs');
 exports.get_login = (request, response, next) => {
     response.render('login', {
         username: request.session.username ? request.session.username : '',
+        
         info: ''
+        
     }); 
 };
 
@@ -15,30 +17,35 @@ exports.principal = (request, response, next) => {
     }); 
 };
 
+
 exports.login = (request, response, next) => {
     User.findOne(request.body.username)
         .then(([rows, fielData])=>{
             
-            // El usuario no registrado se mantendra en la pagina de inicio
+            // Usuarion sin cuenta se mantendra en login
             if (rows.length < 1) {
+                console.log('Cuenta no encontrada');
                 return response.redirect('/users/login');
             }
-
+            
             const user = new User(rows[0].username, rows[0].password);
-            bcrypt.compare(request.body.password, user.password)
+            bcrypt.compare( rows[0].password, user.password)
                 .then(doMatch => {
-                    if (doMatch) {
                         request.session.isLoggedIn = true;
                         request.session.user = user;
                         request.session.username = user.username;
                         return request.session.save(err => {
-                            console.log('Redirigiendo ....');
-                            response.redirect('/users/login/principal');
-                        });
-                    }
-                    response.redirect('/users/login');
+                            response.redirect('/users/principal');
+                
+                    });
+                      
                 }).catch(err => {
-                    response.redirect('/users/login');
+                    console.log('___Contraseña incorrecta ____');      
+                    console.log(user);   
+                    console.log(request.body.password);  
+                    console.log(user.password);  
+                    response.redirect('/users/login/');
+                   
                 });
         }).catch((error)=>{
             console.log(error)
