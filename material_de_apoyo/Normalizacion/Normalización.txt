@@ -1,0 +1,47 @@
+Inserción, Eliminación, actualización y de consultas
+Este diseño de BD está orientado a sistema de informacipon basados en transacciones  (Puntos de venta, sistemas bancarios, sistemas de revervación, etc, etc.)
+
+Contra_Ejemplo 
+
+Bd para almacenar historial académico de alumnos
+
+Alumnos (Matricula, nombre, Carrera, Correo, material, materia1, cal, materia2,cal,...materiaN, CalN)
+
+
+La siguiente relación es utilizada por el departamento de cobros de una empresa que ofrece el servicio de telecable, En ella se tiene una representación de los pagos de servicios mensuales de sus contratantes:
+
+Servicios(cliente, domicilio y estado , año, rentabasica 1, servicios adicionales 1, rentabasica 2, servicios adicionales 2, rentabasica 3, servicios adicionales 3, .... rentabasica 12, servicios adicionales 12)
+
+
+1FN
+
+Servicios(cliente, domiciliom estado, año, mes, rentabasica, servicios adicionales)
+
+2FN
+Servicios (noContrato, cliente, domicilio, estado, año, mes, rentabasica, servicios adicionales)
+FK -> noContrato,año,mes.
+
+3FN
+
+clientes (noContrato, nombre, domicilio, estado)
+cliente_servicio(noContrato, idservicio, año,mes,monto)
+servicios(idservicio, nombre, tarifa)
+
+----------------------------------------------------------------------------------------------------------------
+Una empresa de manufactura controla su producción mediante la siguiente tabla:
+
+Producción (Código de parte, Descripción de parte, Fecha,
+No. de operador, nombre del operador y cantidad producida en Línea 1 Turno 1,
+No. de operador, nombre del operador y cantidad producida en Línea 1 Turno 2,
+No. de operador, nombre del operador y cantidad producida en Línea 1 Turno 3,
+No. de operador, nombre del operador y cantidad producida en Línea 2 Turno 1,
+No. de operador, nombre del operador y cantidad producida en Línea 2 Turno 2,
+No. de operador, nombre del operador y cantidad producida en Línea 2 Turno 3,
+No. de operador, nombre del operador y cantidad producida en Línea 3 Turno 1,
+No. de operador, nombre del operador y cantidad producida en Línea 3 Turno 2,
+No. de operador, nombre del operador y cantidad producida en Línea 3 Turno 3)
+
+
+1FN
+2FN
+3FN
